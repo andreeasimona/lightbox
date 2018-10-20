@@ -3,7 +3,8 @@ import {connect} from 'react-redux';
 import {getImagesDispatcher} from '../state/dispatchers';
 import getImages from '../api/images';
 import LightBox from './LightBox';
-import getImagePrevNextId from '../utils/parser_images';
+import {getImagePrevNextId} from '../utils/parser_images';
+import isBottom from '../utils/scroll';
 
 class Gallery extends React.PureComponent {
   constructor() {
@@ -14,12 +15,21 @@ class Gallery extends React.PureComponent {
   }
 
   componentDidMount() {
-    getImages(this.getImages);
+    const {page} = this.props;
+    getImages(this.getImages, page);
+    window.addEventListener('scroll', this.onScroll);
+  }
+
+  onScroll = () => {
+    isBottom()
+    if (isBottom()) {
+      const {page} = this.props;
+      getImages(this.getImages, page);
+    }
   }
 
   getImages = (data) => {
     const {getImagesProp} = this.props;
-    console.log(data.images);
     getImagesProp(data.images);
   }
 
@@ -51,7 +61,7 @@ class Gallery extends React.PureComponent {
             <span className="Image-Owner">{data.ownername}</span>
           </div>
         ))}
-        <LightBox 
+        <LightBox
           showPrevNext={(isNext) => this.showPrevNext(isNext)}
           hideLightBox={this.hideLightBox}
           isLigthBox={isLigthBox}
@@ -61,7 +71,7 @@ class Gallery extends React.PureComponent {
   }
 }
 
-const mapStateToProps = state => ({images: state.images});
+const mapStateToProps = state => ({images: state.images, page: state.page});
 const mapDispatchToProps = dispatch => (
   {
     getImagesProp: images => dispatch(getImagesDispatcher(images)),

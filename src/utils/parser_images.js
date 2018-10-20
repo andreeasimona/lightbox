@@ -1,4 +1,4 @@
-const getImagePrevNextId = (images, selectedId, isNext) => {
+export const getImagePrevNextId = (images, selectedId, isNext) => {
 	const selectedIdText = images.findIndex(item => item.id === selectedId);
 
 	let selectedPrevNextId = isNext ? selectedIdText + 1 : selectedIdText - 1;
@@ -11,4 +11,8 @@ const getImagePrevNextId = (images, selectedId, isNext) => {
 	return images[selectedPrevNextId].id;
 };
 
-export default getImagePrevNextId;
+export const removeDuplicates = (array, arrayToInsert, prop) => {
+    return arrayToInsert.filter((obj) => {
+        return array.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === -1;
+    });
+}

@@ -6,7 +6,10 @@ const LightBox = ({showPrevNext, hideLightBox, isLigthBox, selectedImage}) => {
     <button type="button" className="Prev" onClick={() => showPrevNext(false)}>&#10094;</button>
 	<div className="LightBox-Content" >
 		<img className="LightBox-Image" src={selectedImage.src} alt="lightbox" />
-		<span>{selectedImage.ownername}</span>
+		<br/>
+		<span>From {selectedImage.ownername} </span>
+		<br/>
+		<span> Photo updated on {selectedImage.dateupload}</span>
 	</div>
     <button type="button" className="Next" onClick={() => showPrevNext(true)}>&#10095;</button>
   </div>
