@@ -1,0 +1,29 @@
+{
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "rules": {
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "react/prefer-stateless-function": [<enabled>,
+            {
+                "ignorePureComponents": <ignorePureComponents>
+            }
+        ]
+    },
+    "globals": {
+        "document": true,
+        "window": true,
+        "fetch": true
+    }
+}

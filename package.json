@@ -1,0 +1,36 @@
+{
+	"name": "server",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"start-server": "node ./server-layer/app.js",
+		"start-client": "react-scripts start",
+		"build-client": "react-scripts build",
+		"linter": "./node_modules/.bin/eslint --ext .js src/ server-layer/"
+	},
+	"author": "Simona Domnisoru",
+	"license": "MIT",
+	"dependencies": {
+		"body-parser": "^1.18.2",
+		"express": "^4.16.3",
+		"flickrapi": "^0.6.0",
+		"eslint-config-airbnb": "^17.1.0",
+		"eslint-plugin-jsx-a11y": "^6.1.2",
+		"eslint-plugin-react": "^7.11.1",
+		"react": "^16.5.2",
+		"react-dom": "^16.5.2",
+		"react-redux": "^5.0.7",
+		"react-scripts": "2.0.5",
+		"redux": "^4.0.1"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	]
+}
