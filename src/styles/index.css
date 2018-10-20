@@ -63,13 +63,15 @@
   top: 15px;
   right: 35px;
   color: white;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
+  border:none;
+  background-color: transparent;
 }
 
 .Prev,
 .Next {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: transparent;
   z-index: 2;
   cursor: pointer;
   position: absolute;
