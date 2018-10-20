@@ -1,6 +1,5 @@
 const https = require('https');
 const { URL, URLSearchParams } = require('url');
-
 const API_URL = 'https://api.flickr.com/services/rest/';
 const { flickrOptions } = require('../utils/flickr_options');
 const parserImages = require('../utils/parser_images');
@@ -12,7 +11,6 @@ const getImages = (req, res) => {
   CALL_URL.search = new URLSearchParams({ ...flickrOptions, page });
   https
     .get(CALL_URL.href, (response) => {
-      // Continuously update stream with data
       let data = '';
       response.on('data', (d) => {
         data += d;

@@ -1,3 +1,5 @@
+import 'react-app-polyfill/ie9';
+import './polyfills';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';

@@ -1,4 +1,4 @@
-const urlUsers = 'http://localhost:8142/api/images';
+const urlUsers = 'http://192.168.0.161:8142/api/images';
 
 const getImages = (cb, page) => (
   fetch(`${urlUsers}/${page}`)
