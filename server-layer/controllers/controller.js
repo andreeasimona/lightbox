@@ -7,6 +7,7 @@ const parserImages = require('../utils/parser_images');
 
 const CALL_URL = new URL(API_URL);
 
+/* Return the images recived from flickr */
 const getImages = (req, res) => {
   const { page } = req.params.page;
   CALL_URL.search = new URLSearchParams({ ...flickrOptions, page });

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import getImages from '../api/images';
 import LightBox from './LightBox';
 import isBottom from '../utils/scroll';
-import { getImagesDispatcher } from '../state/dispatchers';
+import getImagesDispatcher from '../state/dispatchers';
 import { getImagePrevNextId } from '../utils/parser_images';
 
 /**
@@ -28,7 +28,6 @@ class Gallery extends React.PureComponent {
   }
 
   onScroll = () => {
-    isBottom();
     if (isBottom()) {
       const { page } = this.props;
       getImages(this.getImages, page);

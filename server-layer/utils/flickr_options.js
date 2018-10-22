@@ -1,3 +1,4 @@
+/* Flickr API call paramethers */
 const flickrOptions = {
   method: 'flickr.photos.getRecent',
   api_key: '125189ddfa7a0e66bfe3d9339832ba23',

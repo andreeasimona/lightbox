@@ -1,3 +1,4 @@
+/* Detect if a user has scroll to the bottom of the page */
 const isBottom = () => {
   const windowHeight = 'innerHeight' in window ? window.innerHeight : document.documentElement.offsetHeight;
   const { body, documentElement } = document;
