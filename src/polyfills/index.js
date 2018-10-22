@@ -1,2 +1,2 @@
-import './findIndex'
-import './find'
+import './findIndex';
+import './find';

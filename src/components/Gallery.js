@@ -7,6 +7,11 @@ import isBottom from '../utils/scroll';
 import { getImagesDispatcher } from '../state/dispatchers';
 import { getImagePrevNextId } from '../utils/parser_images';
 
+/**
+ * Represents the gallery component.
+ * @param {number} page - The page number
+ * @param {array} images - The array with the images
+ */
 class Gallery extends React.PureComponent {
   constructor() {
     super();
@@ -37,7 +42,7 @@ class Gallery extends React.PureComponent {
 
   showLightBox = (selectedId) => {
     const { images } = this.props;
-    const selectedImage = images.find(item => item.id === selectedId); // change find for IE
+    const selectedImage = images.find(item => item.id === selectedId);
     this.setState({ selectedImage, isLigthBox: true, selectedId });
   }
 

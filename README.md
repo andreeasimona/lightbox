@@ -1,6 +1,6 @@
 # Lightbox
 
-A light box galery done with Node.js and react
+A light box galery done with Node.js and React. The gallery it shows the 100 most recent photos from flickr API. It loads more photos using the infinite scroll technique.
 
 ## Demo
 ![demo](https://user-images.githubusercontent.com/6817073/47282400-5711ae80-d5df-11e8-9834-3d4f410eef95.gif)
@@ -9,8 +9,8 @@ A light box galery done with Node.js and react
    - npm install
 
 ## Run in local enviroment.
-   - npm run start-server - it starts the server in development mood
-   - npm run start-client - it starts the client in development mood on http://localhost:3000/
+   - npm run start-server - it starts the server in development mode
+   - npm run start-client - it starts the client in development mode on http://localhost:3000/
    - npm run build-client  - it builds the client files
    - npm start - it starts the server in production mode and server the static JS, and css files. Open http://localhost:8142/
 
