@@ -7,7 +7,8 @@
 		"start-server": "node ./server-layer/app.js",
 		"start-client": "react-scripts start",
 		"build-client": "react-scripts build",
-		"linter": "./node_modules/.bin/eslint --ext .js src/ server-layer/"
+		"linter": "./node_modules/.bin/eslint --ext .js src/ server-layer/",
+		"npm start": "npm run build-clinet && npm run start-server"
 	},
 	"author": "Simona Domnisoru",
 	"license": "MIT",
