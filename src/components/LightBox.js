@@ -1,6 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * Represents a lightbox components.
+ * @param {function} showPrevNext - Callback for the navigation arrows
+ * @param {function} hideLightBox - Callback for the close button
+ * @param {bool} isLigthBox - It shows if the lightbox is opened or closed
+ * @param {object} selectedImage - The image that the user opened
+ */
 const LightBox = ({
   showPrevNext, hideLightBox, isLigthBox, selectedImage,
 }) => (

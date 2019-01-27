@@ -11,7 +11,7 @@ const getImages = async function (cb, page) {
 	try {
 		let response = await fetch(`${urlUsers}/${page}`);
 		let parsedResponse = await response.json();
-		
+
 		cb(parsedResponse);
 	} catch (err) {
 		cb(err);
