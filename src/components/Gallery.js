@@ -37,7 +37,7 @@ class Gallery extends React.PureComponent {
 
   showLightBox = (selectedId) => {
     const { images } = this.props;
-    const selectedImage = images.find(item => item.id === selectedId); // change find for IE
+    const selectedImage = images.find(item => item.id === selectedId);
     this.setState({ selectedImage, isLigthBox: true, selectedId });
   }
 
